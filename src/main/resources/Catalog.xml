@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog xmlns="http://task1.htp.by">
+    <category Name="Movie">
+        <subCategory Name="amateur">
+            <news>
+                <newsName>Something name</newsName>
+                <author>Arnold S.</author>
+                <date>2018-05-09</date>
+                <newsBody>I'll be back</newsBody>
+            </news>
+            <news>
+                <newsName>release of the video "My Iceland"</newsName>
+                <author>Pankov Nikolas</author>
+                <date>28.11.2015</date>
+                <newsBody>The video report is made up of photos and video footage carefully taken during a hike in
+                    Iceland along the Laugavegur path and what happened before and after.
+                </newsBody>
+            </news>
+            <news>
+                <newsName>release of the video "Norway"</newsName>
+                <author>Pankov Nikolas</author>
+                <date>22.01.2018</date>
+                <newsBody>The video report is made up of photos and video footage taken by participants in the foot
+                    hike in Norway in the Jutenheimen National Park.
+                </newsBody>
+            </news>
+        </subCategory>
+    </category>
+    <category Name="Music">
+        <subCategory Name="chillout">
+            <news>
+                <newsName>release album "Sun"</newsName>
+                <author>Thomas Bergersen</author>
+                <date>01.01.2014</date>
+                <newsBody>One of the best solo albums of the composer! Among other songs, it included a song
+                    "Empire of angels", which became a soundtrack to the wonderful video "My Iceland".
+                </newsBody>
+            </news>
+        </subCategory>
+        <subCategory Name="epic">
+            <news>
+                <newsName>release album "Invincible"</newsName>
+                <author>Thomas Bergersen</author>
+                <date>01.05.2010</date>
+                <newsBody>The album of the project "Two steps from hell" by the composer T. Bergersen! Header
+                    composition became the soundtrack to the fascinating video "Norway".
+                </newsBody>
+            </news>
+        </subCategory>
+    </category>
+    <category Name="Book">
+        <subCategory Name="psychology">
+            <news>
+                <newsName>Russian translation of the book "Wild, Dangerous Journey as a Way to Find Yourself."</newsName>
+                <author>Cheryl Stride</author>
+                <date>04.06.2017</date>
+                <newsBody>The frank and emotional story of a woman overcoming herself inspires guidance
+                    order in their own lives. To come to yourself, you do not have to go on a journey, sometimes
+                    it is enough just to look from the side to how it was already done by someone. Full of dangers
+                    adventure, allowed Cheryl to drastically change his life, to find peace of mind and harmony.
+                </newsBody>
+            </news>
+        </subCategory>
+    </category>
+</catalog>

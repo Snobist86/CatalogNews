@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://task1.htp.by"
+        xmlns:trg="http://task1.htp.by"
+        elementFormDefault="qualified">
+    <element name="catalog" type="trg:Catalog"/>
+    <complexType name="Catalog">
+        <sequence>
+            <element name="category" type="trg:Category" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="Category">
+        <sequence>
+            <element name="subCategory" type="trg:SubCategory" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute type="string" name="Name"/>
+    </complexType>
+    <complexType name="SubCategory">
+        <sequence>
+            <element name="news" type="trg:News" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute type="string" name="Name"/>
+    </complexType>
+    <complexType name="News">
+        <sequence>
+            <element name="newsName" type="string" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="author" type="string" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="date" type="string" minOccurs="0"/>
+            <element name="newsBody" type="string" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+</schema>
