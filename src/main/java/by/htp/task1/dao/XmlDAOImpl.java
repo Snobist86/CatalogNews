@@ -23,7 +23,7 @@ public class XmlDAOImpl implements XmlDAO {
         } catch (JAXBException e) {
             throw new DAOException("JAXBContext exception", e);
         }
-        String xmlSource = System.getProperty("user.dir") + Constant.pathToCatalog;
+        String xmlSource = System.getProperty("user.dir") + Constant.pathCatalog;
         Catalog catalog;
         Unmarshaller unmarshaller;
         try {
@@ -44,7 +44,7 @@ public class XmlDAOImpl implements XmlDAO {
         } catch (JAXBException e) {
             throw new DAOException("JAXBContext exception", e);
         }
-        String xmlTarget = System.getProperty("user.dir") + Constant.pathToCatalog;
+        String xmlTarget = System.getProperty("user.dir") + Constant.pathCatalog;
         try {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
