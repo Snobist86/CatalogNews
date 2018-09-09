@@ -83,7 +83,7 @@ public class News implements BaseEntity {
 
     @Override
     public String toString() {
-        return "<news Name=\"" + newsName  + "\" Author=\"" + author + "\" DateOfIssue="+ date + "\">" +
+        return "<news>" + " Name=\"" + newsName  + "\" Author=\"" + author + "\" DateOfIssue="+ date + "\">" +
                 "\n\t<NewsBody>" + "\n\t\t" + newsBody + "\n\t</NewsBody>\n</news>\n" ;
     }
 }

@@ -2,6 +2,7 @@ package by.htp.task1.dao;
 
 import by.htp.task1.exception.DAOException;
 import by.htp.task1.entity.Catalog;
+import by.htp.task1.util.Constant;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -16,14 +17,14 @@ public class XmlDAOImpl implements XmlDAO {
 
     @Override
     public Catalog readXml() throws DAOException {
-        JAXBContext jaxbContext = null;
+        JAXBContext jaxbContext;
         try {
             jaxbContext = JAXBContext.newInstance(Catalog.class);
         } catch (JAXBException e) {
             throw new DAOException("JAXBContext exception", e);
         }
-        String xmlSource = System.getProperty("user.dir") + "/src/main/resources/Catalog.xml";
-        Catalog catalog = null;
+        String xmlSource = System.getProperty("user.dir") + Constant.pathToCatalog;
+        Catalog catalog;
         Unmarshaller unmarshaller;
         try {
             unmarshaller = jaxbContext.createUnmarshaller();
@@ -43,7 +44,7 @@ public class XmlDAOImpl implements XmlDAO {
         } catch (JAXBException e) {
             throw new DAOException("JAXBContext exception", e);
         }
-        String xmlTarget = System.getProperty("user.dir") + "/src/main/resources/Catalog.xml";
+        String xmlTarget = System.getProperty("user.dir") + Constant.pathToCatalog;
         try {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
