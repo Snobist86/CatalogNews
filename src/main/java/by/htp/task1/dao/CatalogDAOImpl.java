@@ -37,44 +37,6 @@ public class CatalogDAOImpl implements CatalogDAO {
         return result;
     }
 
-    private boolean isValidName(BaseEntity item, Criteria criteria, SearchNewsCriteria.News nameSearchCriteria){
-
-        if(criteria.getCriteria().containsKey(nameSearchCriteria)) {
-            Object value = criteria.getCriteria().get(nameSearchCriteria);
-            return !item.getName().equals(value);
-        }
-        return false;
-    }
-
-    private boolean isValidNews(News parameterSearchNews, Criteria criteria){
-        for (Map.Entry<SearchNewsCriteria.News, Object> cr:
-                criteria.getCriteria().entrySet()) {
-            switch (cr.getKey()) {
-                case NAME:
-                    if(!parameterSearchNews.getName().equals(cr.getValue())){
-                        return false;
-                    }
-                    break;
-                case AUTHOR:
-                    if (!parameterSearchNews.getAuthor().equals(cr.getValue())){
-                        return false;
-                    }
-                    break;
-                case NEWS_BODY:
-                    if (!parameterSearchNews.getNewsBody().equals(cr.getValue())){
-                        return false;
-                    }
-                    break;
-                case DATE_OF_ISSUE:
-                    if (!parameterSearchNews.getDate().equals(cr.getValue())){
-                        return false;
-                    }
-                    break;
-            }
-        }
-        return true;
-    }
-
     @Override
     public News add(Criteria criteria) throws DAOException {
         XmlParserImpl xmlDAOImpl = new XmlParserImpl();
@@ -120,6 +82,44 @@ public class CatalogDAOImpl implements CatalogDAO {
         System.out.println("News successfully added");
 
         return publicNews;
+    }
+
+    private boolean isValidName(BaseEntity item, Criteria criteria, SearchNewsCriteria.News nameSearchCriteria){
+
+        if(criteria.getCriteria().containsKey(nameSearchCriteria)) {
+            Object value = criteria.getCriteria().get(nameSearchCriteria);
+            return !item.getName().equals(value);
+        }
+        return false;
+    }
+
+    private boolean isValidNews(News parameterSearchNews, Criteria criteria){
+        for (Map.Entry<SearchNewsCriteria.News, Object> cr:
+                criteria.getCriteria().entrySet()) {
+            switch (cr.getKey()) {
+                case NAME:
+                    if(!parameterSearchNews.getName().equals(cr.getValue())){
+                        return false;
+                    }
+                    break;
+                case AUTHOR:
+                    if (!parameterSearchNews.getAuthor().equals(cr.getValue())){
+                        return false;
+                    }
+                    break;
+                case NEWS_BODY:
+                    if (!parameterSearchNews.getNewsBody().equals(cr.getValue())){
+                        return false;
+                    }
+                    break;
+                case DATE_OF_ISSUE:
+                    if (!parameterSearchNews.getDate().equals(cr.getValue())){
+                        return false;
+                    }
+                    break;
+            }
+        }
+        return true;
     }
 
     private <T extends BaseEntity> T getNextSearchParameter(List<T> items, Criteria criteria,
