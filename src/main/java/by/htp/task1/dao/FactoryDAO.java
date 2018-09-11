@@ -8,18 +8,18 @@ public final class FactoryDAO {
 
     private FactoryDAO() {}
 
-    public CatalogDAO getCatalogDAO() {
-        return catalogDAO;
-    }
-
     public static FactoryDAO getInstance() {
         return instance;
     }
 
-    private final XmlDAO xmlDAO = new XmlDAOImpl();
+    public CatalogDAO getCatalogDAO() {
+        return catalogDAO;
+    }
 
-    public XmlDAO getXmlDAO() {
-        return xmlDAO;
+    private final XmlParser xmlParser = new XmlParserImpl();
+
+    public XmlParser getXmlParser() {
+        return xmlParser;
     }
 
 }

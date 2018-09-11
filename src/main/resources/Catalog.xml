@@ -9,12 +9,6 @@
                 <newsBody>I'll be back</newsBody>
             </news>
             <news>
-                <newsName>Something name</newsName>
-                <author>Arnold S.</author>
-                <date>2018-05-09</date>
-                <newsBody>I'll be back</newsBody>
-            </news>
-            <news>
                 <newsName>release of the video "My Iceland"</newsName>
                 <author>Pankov Nikolas</author>
                 <date>28.11.2015</date>
@@ -57,7 +51,8 @@
     <category Name="Book">
         <subCategory Name="psychology">
             <news>
-                <newsName>Russian translation of the book "Wild, Dangerous Journey as a Way to Find Yourself."</newsName>
+                <newsName>Russian translation of the book "Wild, Dangerous Journey as a Way to Find Yourself."
+                </newsName>
                 <author>Cheryl Stride</author>
                 <date>04.06.2017</date>
                 <newsBody>The frank and emotional story of a woman overcoming herself inspires guidance

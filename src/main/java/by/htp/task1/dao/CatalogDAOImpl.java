@@ -17,7 +17,7 @@ public class CatalogDAOImpl implements CatalogDAO {
 
     @Override
     public List<News> find(Criteria criteria) throws DAOException {
-        XmlDAOImpl xmlDAOImpl = new XmlDAOImpl();
+        XmlParserImpl xmlDAOImpl = new XmlParserImpl();
         Catalog catalog = xmlDAOImpl.readXml();
         List<News> result = new ArrayList<>();
         for (Category category: catalog.getCategory()) {
@@ -77,7 +77,7 @@ public class CatalogDAOImpl implements CatalogDAO {
 
     @Override
     public News add(Criteria criteria) throws DAOException {
-        XmlDAOImpl xmlDAOImpl = new XmlDAOImpl();
+        XmlParserImpl xmlDAOImpl = new XmlParserImpl();
         Catalog catalog = xmlDAOImpl.readXml();
         List<Category> categories = catalog.getCategory();
 
