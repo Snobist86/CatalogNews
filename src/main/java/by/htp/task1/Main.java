@@ -28,7 +28,7 @@ public class Main {
             throw new RuntimeException(e.getMessage());
         }
 
-        CatalogService service = factory.getCatalogService();
+        CatalogService catalogService = factory.getCatalogService();
 
         //поиск по 2м критериям
         Criteria criteria = new Criteria();
@@ -36,24 +36,24 @@ public class Main {
         criteria.addCriteria(SearchNewsCriteria.News.AUTHOR, "Pankov Nikolas");
         List<News> news = null;
         try {
-            news = service.find(criteria);
+            news = catalogService.find(criteria);
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
         PrintNews.print(news);
-        System.out.println("________________________________________________________________________________________");
+        System.out.println();
 
         //поиск по категории
         Criteria criteria2 = new Criteria();
         criteria2.addCriteria(SearchNewsCriteria.News.CATEGORY_NAME, "Movie");
         List<News> news2 = null;
         try {
-            news2 = service.find(criteria2);
+            news2 = catalogService.find(criteria2);
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
         PrintNews.print(news2);
-        System.out.println("======================================================================================");
+        System.out.println();
 
 
         //добавление новости
@@ -65,7 +65,7 @@ public class Main {
         addNews.addCriteria(SearchNewsCriteria.News.CATEGORY_NAME, "Movie");
         addNews.addCriteria(SearchNewsCriteria.News.SUBCATEGORY_NAME, "amateur");
         try {
-            service.add(addNews);
+            catalogService.add(addNews);
         } catch (ServiceException e) {
             throw new RuntimeException("Add news failed", e);
         }
@@ -80,7 +80,7 @@ public class Main {
         addNews2.addCriteria(SearchNewsCriteria.News.CATEGORY_NAME, "Moviqqqqe");
         addNews2.addCriteria(SearchNewsCriteria.News.SUBCATEGORY_NAME, "amateur");
         try {
-            service.add(addNews2);
+            catalogService.add(addNews2);
         } catch (ServiceException e) {
             throw new RuntimeException("Add news failed", e);
         }

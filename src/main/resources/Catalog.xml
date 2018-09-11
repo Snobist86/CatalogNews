@@ -9,6 +9,12 @@
                 <newsBody>I'll be back</newsBody>
             </news>
             <news>
+                <newsName>Something name</newsName>
+                <author>Arnold S.</author>
+                <date>2018-05-09</date>
+                <newsBody>I'll be back</newsBody>
+            </news>
+            <news>
                 <newsName>release of the video "My Iceland"</newsName>
                 <author>Pankov Nikolas</author>
                 <date>28.11.2015</date>
